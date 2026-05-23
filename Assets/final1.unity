@@ -888,6 +888,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 85
@@ -1334,6 +1338,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 91
@@ -1397,6 +1405,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 88
@@ -2507,6 +2519,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 78
@@ -4454,6 +4470,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LightLum01_03On (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 101230, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 123606, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -5143,6 +5163,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 31
@@ -6132,6 +6156,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SchoolKitchenSeats (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 105788, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 424304, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
       propertyPath: m_RootOrder
       value: 27
@@ -6257,6 +6285,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 89
@@ -7005,6 +7037,10 @@ PrefabInstance:
     - target: {fileID: 193004, guid: d761744e4e6dda4468bd09a1fec7be31, type: 3}
       propertyPath: m_Name
       value: Poster04_1a (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 193004, guid: d761744e4e6dda4468bd09a1fec7be31, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 482780, guid: d761744e4e6dda4468bd09a1fec7be31, type: 3}
       propertyPath: m_RootOrder
@@ -7986,7 +8022,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &161375506
 Transform:
   m_ObjectHideFlags: 0
@@ -8440,6 +8476,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SchoolKitchenSeats (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 105788, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 424304, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -8699,6 +8739,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 116693439}
     m_Modifications:
+    - target: {fileID: 101230, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 123606, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -8772,6 +8816,10 @@ PrefabInstance:
     - target: {fileID: 194034, guid: f62be65dda07dd249ada6047c9a5c230, type: 3}
       propertyPath: m_Name
       value: Poster04_2a (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 194034, guid: f62be65dda07dd249ada6047c9a5c230, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 493836, guid: f62be65dda07dd249ada6047c9a5c230, type: 3}
       propertyPath: m_RootOrder
@@ -9111,6 +9159,10 @@ PrefabInstance:
     - target: {fileID: 101230, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
       propertyPath: m_Name
       value: LightLum01_03On (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 101230, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 123606, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
       propertyPath: m_IsActive
@@ -9659,6 +9711,10 @@ PrefabInstance:
     - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_Name
       value: Radiator01 (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 421204, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_RootOrder
@@ -11227,6 +11283,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 100
@@ -11702,6 +11762,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1206854717}
     m_Modifications:
+    - target: {fileID: 196032, guid: 6df3fbf33386d7347b02653380b4a8f1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 480418, guid: 6df3fbf33386d7347b02653380b4a8f1, type: 3}
       propertyPath: m_RootOrder
       value: 49
@@ -11817,6 +11881,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 101
@@ -12571,6 +12639,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 69
@@ -12897,6 +12969,10 @@ PrefabInstance:
     - target: {fileID: 193004, guid: d761744e4e6dda4468bd09a1fec7be31, type: 3}
       propertyPath: m_Name
       value: Poster04_1a (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 193004, guid: d761744e4e6dda4468bd09a1fec7be31, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 482780, guid: d761744e4e6dda4468bd09a1fec7be31, type: 3}
       propertyPath: m_RootOrder
@@ -13232,6 +13308,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Poster04_1a (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 193004, guid: d761744e4e6dda4468bd09a1fec7be31, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 482780, guid: d761744e4e6dda4468bd09a1fec7be31, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -13317,6 +13397,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 68
@@ -13926,6 +14010,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LightLum01_01On (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 103
@@ -14400,6 +14488,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 27
@@ -14628,6 +14720,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 37
@@ -14893,6 +14989,10 @@ PrefabInstance:
     - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_Name
       value: Radiator01 (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 421204, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_RootOrder
@@ -15451,6 +15551,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 28
@@ -15563,6 +15667,10 @@ PrefabInstance:
     - target: {fileID: 101230, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
       propertyPath: m_Name
       value: LightLum01_03On (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 101230, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 123606, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
       propertyPath: m_IsActive
@@ -16897,6 +17005,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 29
@@ -17191,7 +17303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &342439730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18752,6 +18864,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door07a (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 199420, guid: dd642d046532d6449b5c8884a203ada2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 424166, guid: dd642d046532d6449b5c8884a203ada2, type: 3}
       propertyPath: m_RootOrder
       value: 28
@@ -19183,6 +19299,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 59
@@ -19436,6 +19556,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 34
@@ -21048,6 +21172,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LightLum01_03On (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 101230, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 123606, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -21473,6 +21601,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Radiator01 (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 421204, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -21846,6 +21978,10 @@ PrefabInstance:
     - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_Name
       value: Radiator01 (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 421204, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_RootOrder
@@ -22961,6 +23097,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 61
@@ -23191,6 +23331,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 36
@@ -23411,6 +23555,10 @@ PrefabInstance:
     - target: {fileID: 169036, guid: 0c5d520e4feb8dd4aa1c6cf7c2ef1d4e, type: 3}
       propertyPath: m_Name
       value: Poster03_3a (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 169036, guid: 0c5d520e4feb8dd4aa1c6cf7c2ef1d4e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 440936, guid: 0c5d520e4feb8dd4aa1c6cf7c2ef1d4e, type: 3}
       propertyPath: m_RootOrder
@@ -23657,6 +23805,10 @@ PrefabInstance:
     - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_Name
       value: LightLum01_01On (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
@@ -25068,6 +25220,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 72
@@ -25391,7 +25547,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &531137997
 Transform:
   m_ObjectHideFlags: 0
@@ -25634,6 +25790,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 84
@@ -25673,6 +25833,18 @@ PrefabInstance:
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.70701104
+      objectReference: {fileID: 0}
+    - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 88.113
+      objectReference: {fileID: 0}
+    - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25761,6 +25933,10 @@ PrefabInstance:
     - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_Name
       value: LightLum01_01On (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
@@ -26098,6 +26274,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 90
@@ -26263,6 +26443,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Radiator01 (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 421204, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -26324,6 +26508,10 @@ PrefabInstance:
     - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_Name
       value: Radiator01 (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 421204, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_RootOrder
@@ -29225,6 +29413,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 65
@@ -29283,6 +29475,10 @@ PrefabInstance:
     - target: {fileID: 199420, guid: dd642d046532d6449b5c8884a203ada2, type: 3}
       propertyPath: m_Name
       value: Door07a (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 199420, guid: dd642d046532d6449b5c8884a203ada2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 424166, guid: dd642d046532d6449b5c8884a203ada2, type: 3}
       propertyPath: m_RootOrder
@@ -29677,6 +29873,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SchoolKitchenSeats (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 105788, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 424304, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -29780,6 +29980,10 @@ PrefabInstance:
     - target: {fileID: 199420, guid: dd642d046532d6449b5c8884a203ada2, type: 3}
       propertyPath: m_Name
       value: Door07a (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 199420, guid: dd642d046532d6449b5c8884a203ada2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 424166, guid: dd642d046532d6449b5c8884a203ada2, type: 3}
       propertyPath: m_RootOrder
@@ -34732,6 +34936,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LightLum01_03On (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 101230, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 123606, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -36915,6 +37123,10 @@ PrefabInstance:
     - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_Name
       value: Radiator01 (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 421204, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_RootOrder
@@ -39927,6 +40139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SchoolKitchenSeats (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 105788, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 424304, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -40413,6 +40629,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Poster03_1a (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 194730, guid: f5cb85e913a318242834edc707a4e0b2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 402926, guid: f5cb85e913a318242834edc707a4e0b2, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -40483,7 +40703,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!182 &797087029
 WindZone:
   m_ObjectHideFlags: 0
@@ -41656,6 +41876,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 87
@@ -44835,6 +45059,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 62
@@ -44885,6 +45113,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 98
@@ -45859,6 +46091,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 755408761}
     m_Modifications:
+    - target: {fileID: 148506, guid: cdbabeed117a76c4f8f6b72f8c9d0c8c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 455620, guid: cdbabeed117a76c4f8f6b72f8c9d0c8c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.282
@@ -46076,6 +46312,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 60
@@ -46426,6 +46666,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chair01b (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 112624, guid: 7e297e3c9c8d49d4ab1b122e65bee243, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 491932, guid: 7e297e3c9c8d49d4ab1b122e65bee243, type: 3}
       propertyPath: m_RootOrder
       value: 48
@@ -46595,6 +46839,10 @@ PrefabInstance:
     - target: {fileID: 105788, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
       propertyPath: m_Name
       value: SchoolKitchenSeats (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105788, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 424304, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
       propertyPath: m_RootOrder
@@ -47486,7 +47734,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &930269721
 Transform:
   m_ObjectHideFlags: 0
@@ -47728,6 +47976,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Poster04_5a (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 106984, guid: 261c968112a721f4cb13e031958d1fe4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 457688, guid: 261c968112a721f4cb13e031958d1fe4, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -47888,6 +48140,10 @@ PrefabInstance:
     - target: {fileID: 105788, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
       propertyPath: m_Name
       value: SchoolKitchenSeats (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105788, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 424304, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
       propertyPath: m_RootOrder
@@ -48841,6 +49097,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LightLum01_03On (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 101230, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 123606, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -49012,6 +49272,10 @@ PrefabInstance:
     - target: {fileID: 130542, guid: 84ad22b19fe67e9449a184ba4b562b36, type: 3}
       propertyPath: m_Name
       value: Poster04_6a (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 130542, guid: 84ad22b19fe67e9449a184ba4b562b36, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 441688, guid: 84ad22b19fe67e9449a184ba4b562b36, type: 3}
       propertyPath: m_RootOrder
@@ -49826,6 +50090,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 76
@@ -50156,6 +50424,10 @@ PrefabInstance:
     - target: {fileID: 105788, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
       propertyPath: m_Name
       value: SchoolKitchenSeats (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105788, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 424304, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
       propertyPath: m_RootOrder
@@ -50989,8 +51261,16 @@ PrefabInstance:
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 100052, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100052, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 100054, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100054, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -51005,8 +51285,16 @@ PrefabInstance:
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 100060, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100060, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100062, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100062, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -51161,16 +51449,32 @@ PrefabInstance:
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 100136, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100136, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100138, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100138, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 100140, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100140, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100142, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100142, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -51290,7 +51594,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100200, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100202, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100202, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -51298,22 +51606,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100204, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100204, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 100206, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100206, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100208, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100208, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 100210, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100210, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100212, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100212, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
@@ -51321,7 +51645,15 @@ PrefabInstance:
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 100214, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100214, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100216, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100216, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
@@ -51329,7 +51661,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100218, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100218, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100220, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100220, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
@@ -51337,16 +51677,32 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100222, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100222, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100224, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100224, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 100226, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100226, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100228, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100228, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -51355,6 +51711,10 @@ PrefabInstance:
     - target: {fileID: 100230, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100232, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100232, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -51369,8 +51729,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100238, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100238, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100240, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100240, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -51411,6 +51779,10 @@ PrefabInstance:
     - target: {fileID: 100258, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100260, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100260, guid: bbd61fb0d8f8b7a4a925414339b268a7, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -54639,6 +55011,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LightLum01_03On (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 101230, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 123606, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -54713,6 +55089,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 80
@@ -54991,6 +55371,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 82
@@ -55030,6 +55414,18 @@ PrefabInstance:
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.70701104
+      objectReference: {fileID: 0}
+    - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 88.113
+      objectReference: {fileID: 0}
+    - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -55413,6 +55809,10 @@ PrefabInstance:
     - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_Name
       value: Radiator01 (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 421204, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_RootOrder
@@ -56554,6 +56954,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 66
@@ -56845,6 +57249,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 755408761}
     m_Modifications:
+    - target: {fileID: 131214, guid: 2be38d8603bd375459a24022e0a4a8d0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 492806, guid: 2be38d8603bd375459a24022e0a4a8d0, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -57010,6 +57418,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 75
@@ -57654,6 +58066,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 32
@@ -58235,6 +58651,10 @@ PrefabInstance:
     - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_Name
       value: Radiator01 (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 421204, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_RootOrder
@@ -59850,6 +60270,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 755408761}
     m_Modifications:
+    - target: {fileID: 135492, guid: e22f06321e4701a46a3b456866d41078, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 417978, guid: e22f06321e4701a46a3b456866d41078, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -60524,6 +60948,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 97
@@ -63038,6 +63466,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 30
@@ -63679,7 +64111,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1206854717
 Transform:
   m_ObjectHideFlags: 0
@@ -64131,6 +64563,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Radiator01 (46)
       objectReference: {fileID: 0}
+    - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 421204, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -64192,6 +64628,10 @@ PrefabInstance:
     - target: {fileID: 126124, guid: 41995a67da46cd041b30345cc6dff096, type: 3}
       propertyPath: m_Name
       value: Door02Post (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 126124, guid: 41995a67da46cd041b30345cc6dff096, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 426904, guid: 41995a67da46cd041b30345cc6dff096, type: 3}
       propertyPath: m_RootOrder
@@ -64536,6 +64976,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 35
@@ -65045,6 +65489,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 81
@@ -65084,6 +65532,18 @@ PrefabInstance:
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.70701104
+      objectReference: {fileID: 0}
+    - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 88.113
+      objectReference: {fileID: 0}
+    - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -65157,6 +65617,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door07aPost (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 161868, guid: b607a1ea5c603054a9c5a97812425319, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 423332, guid: b607a1ea5c603054a9c5a97812425319, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -65214,6 +65678,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 64
@@ -65561,6 +66029,10 @@ PrefabInstance:
     - target: {fileID: 101230, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
       propertyPath: m_Name
       value: LightLum01_03On (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 101230, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 123606, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
       propertyPath: m_IsActive
@@ -66067,6 +66539,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 92
@@ -66252,6 +66728,10 @@ PrefabInstance:
     - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_Name
       value: Radiator01 (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 421204, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_RootOrder
@@ -67759,6 +68239,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Radiator01 (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 421204, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -68057,6 +68541,10 @@ PrefabInstance:
     - target: {fileID: 105788, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
       propertyPath: m_Name
       value: SchoolKitchenSeats (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105788, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 424304, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
       propertyPath: m_RootOrder
@@ -69516,6 +70004,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 63
@@ -70237,6 +70729,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Poster04_2a (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 194034, guid: f62be65dda07dd249ada6047c9a5c230, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 493836, guid: f62be65dda07dd249ada6047c9a5c230, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -70825,6 +71321,10 @@ PrefabInstance:
     - target: {fileID: 193004, guid: d761744e4e6dda4468bd09a1fec7be31, type: 3}
       propertyPath: m_Name
       value: Poster04_1a (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 193004, guid: d761744e4e6dda4468bd09a1fec7be31, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 482780, guid: d761744e4e6dda4468bd09a1fec7be31, type: 3}
       propertyPath: m_RootOrder
@@ -72174,6 +72674,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 93
@@ -72235,6 +72739,10 @@ PrefabInstance:
     - target: {fileID: 105788, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
       propertyPath: m_Name
       value: SchoolKitchenSeats (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105788, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 424304, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
       propertyPath: m_RootOrder
@@ -72761,6 +73269,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 74
@@ -73459,6 +73971,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 79
@@ -74169,7 +74685,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1394044242
 Transform:
   m_ObjectHideFlags: 0
@@ -75143,6 +75659,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 86
@@ -77449,6 +77969,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Poster03_2a (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 182334, guid: de5ddd24f9a0fb241ac08d023dbed901, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 471222, guid: de5ddd24f9a0fb241ac08d023dbed901, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -77662,6 +78186,10 @@ PrefabInstance:
     - target: {fileID: 161044, guid: 406501258ec1c4444990e9cd07b84019, type: 3}
       propertyPath: m_Name
       value: Capboard01_05 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 161044, guid: 406501258ec1c4444990e9cd07b84019, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 459096, guid: 406501258ec1c4444990e9cd07b84019, type: 3}
       propertyPath: m_RootOrder
@@ -77877,6 +78405,10 @@ PrefabInstance:
     - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_Name
       value: Radiator01 (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 421204, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_RootOrder
@@ -78234,6 +78766,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SchoolKitchenSeats (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 105788, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 424304, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -78504,6 +79040,10 @@ PrefabInstance:
     - target: {fileID: 151390, guid: 48c47d826b9c3db4eb05231d5bac533b, type: 3}
       propertyPath: m_Name
       value: Capboard01_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 151390, guid: 48c47d826b9c3db4eb05231d5bac533b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 465400, guid: 48c47d826b9c3db4eb05231d5bac533b, type: 3}
       propertyPath: m_RootOrder
@@ -79335,6 +79875,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Radiator01 (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 421204, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -79397,6 +79941,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1206854717}
     m_Modifications:
+    - target: {fileID: 145634, guid: 3c43c669847c1ac448012026c6b64464, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 459604, guid: 3c43c669847c1ac448012026c6b64464, type: 3}
       propertyPath: m_RootOrder
       value: 47
@@ -80006,6 +80554,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Radiator01 (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 421204, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -80118,6 +80670,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 95
@@ -80639,6 +81195,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SchoolKitchenSeats (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 105788, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 424304, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
       propertyPath: m_RootOrder
       value: 28
@@ -80689,6 +81249,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 77
@@ -80742,6 +81306,10 @@ PrefabInstance:
     - target: {fileID: 105788, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
       propertyPath: m_Name
       value: SchoolKitchenSeats (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105788, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 424304, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
       propertyPath: m_RootOrder
@@ -82666,6 +83234,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SchoolKitchenSeats (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 105788, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 424304, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -82766,6 +83338,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1206854717}
     m_Modifications:
+    - target: {fileID: 117986, guid: 8dfd9c2ac994d7743b7a97398f304360, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 407310, guid: 8dfd9c2ac994d7743b7a97398f304360, type: 3}
       propertyPath: m_RootOrder
       value: 53
@@ -83930,6 +84506,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SchoolKitchenSeats (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 105788, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 424304, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -84618,7 +85198,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1613839684
 Transform:
   m_ObjectHideFlags: 0
@@ -85461,6 +86041,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door02Post (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 126124, guid: 41995a67da46cd041b30345cc6dff096, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 426904, guid: 41995a67da46cd041b30345cc6dff096, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -86024,6 +86608,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 58
@@ -86197,6 +86785,10 @@ PrefabInstance:
     - target: {fileID: 117986, guid: 8dfd9c2ac994d7743b7a97398f304360, type: 3}
       propertyPath: m_Name
       value: ChairOffice01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 117986, guid: 8dfd9c2ac994d7743b7a97398f304360, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 407310, guid: 8dfd9c2ac994d7743b7a97398f304360, type: 3}
       propertyPath: m_RootOrder
@@ -87151,6 +87743,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 57
@@ -87519,6 +88115,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LightLum01_01On (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 102
@@ -87635,6 +88235,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 67
@@ -89988,6 +90592,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 131214, guid: 2be38d8603bd375459a24022e0a4a8d0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 492806, guid: 2be38d8603bd375459a24022e0a4a8d0, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -90048,6 +90656,10 @@ PrefabInstance:
     - target: {fileID: 131214, guid: 2be38d8603bd375459a24022e0a4a8d0, type: 3}
       propertyPath: m_Name
       value: Door02 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 131214, guid: 2be38d8603bd375459a24022e0a4a8d0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 492806, guid: 2be38d8603bd375459a24022e0a4a8d0, type: 3}
       propertyPath: m_RootOrder
@@ -90800,6 +91412,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Radiator01 (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 421204, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -91193,6 +91809,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 71
@@ -91839,6 +92459,10 @@ PrefabInstance:
     - target: {fileID: 199420, guid: dd642d046532d6449b5c8884a203ada2, type: 3}
       propertyPath: m_Name
       value: Door07a (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 199420, guid: dd642d046532d6449b5c8884a203ada2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 424166, guid: dd642d046532d6449b5c8884a203ada2, type: 3}
       propertyPath: m_RootOrder
@@ -93040,6 +93664,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 73
@@ -94204,6 +94832,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 96
@@ -94429,6 +95061,10 @@ PrefabInstance:
     - target: {fileID: 101230, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
       propertyPath: m_Name
       value: LightLum01_03On (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 101230, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 123606, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
       propertyPath: m_IsActive
@@ -95538,6 +96174,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door07aPost (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 161868, guid: b607a1ea5c603054a9c5a97812425319, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 423332, guid: b607a1ea5c603054a9c5a97812425319, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -96546,6 +97186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SchoolKitchenSeats (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 105788, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 424304, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -96646,6 +97290,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 99
@@ -97457,6 +98105,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 83
@@ -98113,6 +98765,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Radiator01 (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 421204, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -98394,6 +99050,10 @@ PrefabInstance:
     - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_Name
       value: Radiator01 (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 421204, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_RootOrder
@@ -99064,6 +99724,10 @@ PrefabInstance:
     - target: {fileID: 104074, guid: 0e96466a3f3649d4b96e193738b1a563, type: 3}
       propertyPath: m_Name
       value: Poster04_4a (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 104074, guid: 0e96466a3f3649d4b96e193738b1a563, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 439356, guid: 0e96466a3f3649d4b96e193738b1a563, type: 3}
       propertyPath: m_RootOrder
@@ -99923,6 +100587,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SchoolKitchenSeats (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 105788, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 424304, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -100635,7 +101303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1906371531
 Transform:
   m_ObjectHideFlags: 0
@@ -101324,6 +101992,10 @@ PrefabInstance:
     - target: {fileID: 105788, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
       propertyPath: m_Name
       value: SchoolKitchenSeats (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105788, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 424304, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
       propertyPath: m_RootOrder
@@ -102405,6 +103077,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -103416,6 +104092,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SchoolKitchenSeats (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 105788, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 424304, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -103607,6 +104287,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SchoolKitchenSeats (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 105788, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 424304, guid: cd2596b244d86394b8ac31263d76fa34, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -103665,6 +104349,10 @@ PrefabInstance:
     - target: {fileID: 101230, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
       propertyPath: m_Name
       value: LightLum01_03On (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 101230, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 123606, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
       propertyPath: m_IsActive
@@ -104214,6 +104902,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 94
@@ -104384,6 +105076,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door07aPost (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 161868, guid: b607a1ea5c603054a9c5a97812425319, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 423332, guid: b607a1ea5c603054a9c5a97812425319, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -104500,6 +105196,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 755408761}
     m_Modifications:
+    - target: {fileID: 146584, guid: 363867a985f1ea248acb7ce0fb14b296, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 426926, guid: 363867a985f1ea248acb7ce0fb14b296, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -104635,6 +105335,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 38
@@ -105616,6 +106320,10 @@ PrefabInstance:
     - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_Name
       value: Radiator01 (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 421204, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_RootOrder
@@ -109092,7 +109800,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2027867945
 Transform:
   m_ObjectHideFlags: 0
@@ -110477,6 +111185,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Radiator01 (46)
       objectReference: {fileID: 0}
+    - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 421204, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -111179,6 +111891,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Radiator01 (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 125674, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 421204, guid: f53bd203aa5f19a4ba726756bec2eaf4, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -111413,6 +112129,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 870386235}
     m_Modifications:
+    - target: {fileID: 101866, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 491822, guid: bf710dc4445211b45af7459f14f13c8a, type: 3}
       propertyPath: m_RootOrder
       value: 70
@@ -113335,6 +114055,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door07aPost (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 161868, guid: b607a1ea5c603054a9c5a97812425319, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 423332, guid: b607a1ea5c603054a9c5a97812425319, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -113795,6 +114519,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 755408761}
     m_Modifications:
+    - target: {fileID: 126124, guid: 41995a67da46cd041b30345cc6dff096, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 426904, guid: 41995a67da46cd041b30345cc6dff096, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -113889,6 +114617,10 @@ PrefabInstance:
     - target: {fileID: 101230, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
       propertyPath: m_Name
       value: LightLum01_03On (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 101230, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 123606, guid: b8c47b237ac85a24897a0e113de7340a, type: 3}
       propertyPath: m_IsActive

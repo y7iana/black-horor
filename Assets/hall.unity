@@ -96,7 +96,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: a339fe65d7414b242b80027f6704c548, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -9045,6 +9045,7 @@ GameObject:
   - component: {fileID: 1327120189}
   - component: {fileID: 1327120188}
   - component: {fileID: 1327120187}
+  - component: {fileID: 1327120192}
   m_Layer: 0
   m_Name: '[BuildingBlock] Camera Rig'
   m_TagString: Player
@@ -9218,6 +9219,19 @@ Transform:
   - {fileID: 568498776}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -88.75, z: 0}
+--- !u!114 &1327120192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327120186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dd27c6a171282a4a859d666de8691b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetYRotation: 270
 --- !u!1 &1327588632
 GameObject:
   m_ObjectHideFlags: 0

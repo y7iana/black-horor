@@ -4,5 +4,19 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/whole.unity
+    guid: 25b2c43c57c6f41e798c4ff60a10ff2d
+  - enabled: 1
+    path: Assets/hall.unity
+    guid: 828705358ea2044c4a9b31a9685271af
+  - enabled: 1
+    path: Assets/sport(1).unity
+    guid: 58cf617a390b74bdf8af2f740483d0b7
+  - enabled: 1
+    path: Assets/bath.unity
+    guid: 6aa4cd16557654c7f9d2baf031d609a3
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: bec02c7609faa2b4a9460d602661c90c, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 05c277f6d25d4ea428a2231e8107d1c4, type: 2}

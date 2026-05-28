@@ -16,9 +16,6 @@ public class VRBackpack : MonoBehaviour
     private bool isItemOut = false;
     private int currentIndex = 0;
 
-    // 【修改重點 1】：已經將原本的 Awake() 刪除！
-    // 跨場景永生功能已經全權交給頂層的 [Global_Player] 上的 PlayerSingleton 處理。
-
     void Start()
     {
         // 確保遊戲開始時提示 UI 是隱藏的
@@ -53,20 +50,14 @@ public class VRBackpack : MonoBehaviour
         {
             inventory.Add(item);
 
-            // ==========================================
-            // 【關鍵修改：跨場景物品記憶連線】
-            // 在物品正式進入背包的這一刻，立刻把它寫入全域筆記本！
-            // ==========================================
+            // 跨場景物品記憶連線
             ItemStateSaver saver = item.GetComponent<ItemStateSaver>();
             if (saver != null)
             {
                 saver.MarkAsCollected();
             }
 
-            // 【修改重點 2：跨場景道具保留優化】
-            // 取代原本的 DontDestroyOnLoad(item)，改為「認爸爸」機制！
-            // 直接讓道具變成背包物件的子物件。因為大包包 [Global_Player] 已經永生不滅了，
-            // 變成它子物件的道具就會自然而然跟著一起跨場景，架構最乾淨、絕對不會遺失！
+            // 跨場景道具保留優化（認爸爸機制）
             item.transform.SetParent(this.transform);
 
             item.SetActive(false); // 收進背包，在場景中隱藏
@@ -102,13 +93,40 @@ public class VRBackpack : MonoBehaviour
             GameObject item = inventory[currentIndex];
             item.SetActive(true);
             
-            // 放在眼前 30 公分處
-            item.transform.position = centerEyeCamera.position + centerEyeCamera.forward * 0.3f;
+            // 預設展示距離
+            float distance = 0.4f; 
+            
+            // ==========================================
+            // 【核心邏輯】：讀取物品專屬設定
+            // ==========================================
+            VRItemSettings settings = item.GetComponent<VRItemSettings>();
+
+            if (settings != null)
+            {
+                if (settings.keepOriginalScale)
+                {
+                    // 若勾選保留原尺寸，則套用遊戲開始時記錄的大小
+                    item.transform.localScale = settings.storedScale;
+                }
+                else
+                {
+                    // 否則套用自訂的縮小尺寸
+                    item.transform.localScale = settings.customScale;
+                }
+                distance = settings.displayDistance;
+            }
+            else
+            {
+                // 防呆機制：如果忘記掛載設定腳本，預設套用轉學單的縮小尺寸
+                item.transform.localScale = new Vector3(0.1960359f, 0.2764107f, 0.1960359f);
+            }
+
+            // 放在眼前指定距離處
+            item.transform.position = centerEyeCamera.position + centerEyeCamera.forward * distance;
             item.transform.LookAt(centerEyeCamera);
             item.transform.Rotate(0, 180, 0); // 轉正
 
-            // 【核心修復：防止拿出時直接掉落 / 切換道具掉出】
-            // 從背包拿出或切換道具時，強制重啟「時間暫停 (isKinematic = true)」，讓它乖乖飄在空中等你抓！
+            // 防止拿出時直接掉落 / 切換道具掉出
             Rigidbody rb = item.GetComponent<Rigidbody>();
             if (rb != null)
             {

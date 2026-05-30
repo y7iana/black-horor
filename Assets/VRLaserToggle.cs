@@ -118,7 +118,10 @@ public class VRLaserToggle : MonoBehaviour
         else
         {
             laser.SetPosition(1, hand.position + hand.forward * maxDistance);
-            laser.endColor = new Color(0, 1, 1, 0); 
+            
+            // 【關鍵修改】：將此處的顏色從透明 (new Color(0, 1, 1, 0)) 改為 Color.cyan
+            // 確保雷射在沒有指到任何東西的黑畫面中，依然保持清晰可見的青色射線。
+            laser.endColor = Color.cyan; 
             
             if (reticle != null) reticle.SetActive(false);
         }

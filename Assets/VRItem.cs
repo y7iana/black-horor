@@ -14,7 +14,8 @@ public class VRItem : MonoBehaviour
 
     void Update()
     {
-        if (isBeingHeld && (OVRInput.GetDown(OVRInput.RawButton.X) || OVRInput.GetDown(OVRInput.RawButton.A)))
+        // 【已修正】：現在只會偵測左手 X 鍵 (RawButton.X)
+        if (isBeingHeld && OVRInput.GetDown(OVRInput.RawButton.X))
         {
             if (backpack != null)
             {

@@ -3,45 +3,55 @@ using UnityEngine.SceneManagement;
 
 public class DoorProximityPress : MonoBehaviour
 {
-    [Header("目標場景設定 (回程請填 whole)")]
+    [Header("目標場景名稱")]
     public string targetSceneName = "whole";
 
-    // 這個開關用來紀錄「玩家現在是不是站在門前面」
+    [Header("目標出生點 ID (必須與目標場景中 PlayerSpawner 的 ID 一致)")]
+    public string targetSpawnID = "Gate"; 
+
+    [Header("提示文字物件")]
+    public GameObject promptUI; 
+
     private bool canOpenDoor = false; 
 
-    // 當玩家走進透明方塊的範圍時，把開關打開
+    private void Start()
+    {
+        if (promptUI != null) promptUI.SetActive(false);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
+        // 確保偵測到玩家
         if (other.CompareTag("Player") || other.CompareTag("MainCamera"))
         {
             canOpenDoor = true;
+            if (promptUI != null) promptUI.SetActive(true);
         }
     }
 
-    // 當玩家離開門的範圍時，把開關關掉，避免在遠處誤觸
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player") || other.CompareTag("MainCamera"))
         {
             canOpenDoor = false;
+            if (promptUI != null) promptUI.SetActive(false);
         }
     }
 
-    // 遊戲隨時都在檢查：玩家是否在門邊？且是否按下了按鈕？
     private void Update()
     {
         if (canOpenDoor)
         {
-            // OVRInput.RawButton.A 代表右手的 A 鍵
-            // OVRInput.RawButton.RIndexTrigger 代表右手的食指板機鍵
+            // 監聽按鍵輸入
             if (OVRInput.GetDown(OVRInput.RawButton.A) || OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
             {
-                // 【新增的神奇魔法】按下去的瞬間，把當前場景的名字寫進備忘錄！
-                SpawnManager.lastScene = SceneManager.GetActiveScene().name;
+                // 【關鍵修正】：使用 SceneBridge 記憶體橋樑傳遞資料
+                // 這比 PlayerPrefs 更快、更穩定，完全不會有讀寫延遲
+                SceneBridge.nextSpawnID = targetSpawnID;
 
-                Debug.Log($"[門控系統] 記錄離開場景：{SpawnManager.lastScene}，準備前往 {targetSceneName}！");
+                Debug.Log($"[門控系統] 準備前往 {targetSceneName}，目的地 ID: {targetSpawnID}");
                 
-                // 執行換場景
+                // 載入場景
                 SceneManager.LoadScene(targetSceneName);
             }
         }

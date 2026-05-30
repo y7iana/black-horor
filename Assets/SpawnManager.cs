@@ -8,11 +8,12 @@ public class SpawnManager : MonoBehaviour
     [Header("玩家主相機")]
     public GameObject cameraRig;
 
-    [Header("4 個隱形出生點")]
+    [Header("5 個隱形出生點")]
     public Transform spawnSchoolGate;
     public Transform spawnHall;
     public Transform spawnBath;
     public Transform spawnSport;
+    public Transform spawnClassroom; // 教室的出生點
 
     void Start()
     {
@@ -21,11 +22,15 @@ public class SpawnManager : MonoBehaviour
             cameraRig = GameObject.Find("[BuildingBlock] Camera Rig");
         }
 
-        // 判斷要去哪個點，但這次我們不馬上傳送，而是呼叫「延遲傳送程序」
         Transform target = spawnSchoolGate;
-        if (lastScene == "hall") target = spawnHall;
-        else if (lastScene == "bath") target = spawnBath;
-        else if (lastScene == "sport(1)") target = spawnSport;
+        
+        // 【防呆機制】把紀錄的場景名字強制轉成全小寫，再來比對！
+        string checkScene = lastScene.ToLower();
+        
+        if (checkScene == "hall") target = spawnHall;
+        else if (checkScene == "bath") target = spawnBath;
+        else if (checkScene == "sport(1)") target = spawnSport;
+        else if (checkScene == "classroom") target = spawnClassroom; // 這裡統一全部用小寫比對
 
         // 啟動延遲傳送
         StartCoroutine(DelayedTeleport(target));

@@ -66,6 +66,15 @@ public class VRBackpack : MonoBehaviour
             // 顯示 UI 提示 2 秒鐘
             StopAllCoroutines();
             StartCoroutine(ShowUIRoutine());
+
+            // ==========================================
+            // 【關鍵修改】：通知遊戲大腦 (GameFlowManager) 物品已收集！
+            // 這裡把 item.name 傳過去，讓大腦可以比對是不是指定的關鍵道具
+            // ==========================================
+            if (GameFlowManager.instance != null)
+            {
+                GameFlowManager.instance.CollectItem(item.name);
+            }
         }
     }
 

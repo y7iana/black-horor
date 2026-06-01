@@ -24,6 +24,22 @@ public class GameFlowManager : MonoBehaviour
     public GameObject ending2Panel; 
     public GameObject ending3Panel; 
 
+    // ==========================================
+    // 【新增】：收集語音設定
+    // ==========================================
+    [Header("收集語音設定")]
+    public AudioSource audioSource;
+    [Tooltip("對應 book_chair")]
+    public AudioClip sound_book_chair;
+    [Tooltip("對應 TransferForm_Whole_Board")]
+    public AudioClip sound_TransferForm_Whole_Board;
+    [Tooltip("對應 TransferForm_Classroom")]
+    public AudioClip sound_TransferForm_Classroom;
+    [Tooltip("對應 TransferForm_Whole_bad")]
+    public AudioClip sound_TransferForm_Whole_bad;
+    [Tooltip("對應 book_locker (以防萬一你也想加)")]
+    public AudioClip sound_book_locker;
+
     private HashSet<string> collectedItems = new HashSet<string>();
 
     private string[] requiredItems = new string[] 
@@ -75,6 +91,9 @@ public class GameFlowManager : MonoBehaviour
         
         if (timerText != null) timerText.gameObject.SetActive(false);
 
+        // 自動抓取身上的 AudioSource 元件
+        if (audioSource == null) audioSource = GetComponent<AudioSource>();
+
         if (autoStartTimer) StartTimer(); 
     }
 
@@ -123,6 +142,27 @@ public class GameFlowManager : MonoBehaviour
         if (!isTimerRunning) return;
 
         collectedItems.Add(itemName);
+
+        // ==========================================
+        // 判斷物品名稱，並播放對應音檔
+        // ==========================================
+        if (audioSource != null)
+        {
+            if (itemName == "book_chair" && sound_book_chair != null)
+                audioSource.PlayOneShot(sound_book_chair);
+                
+            else if (itemName == "TransferForm_Whole_Board" && sound_TransferForm_Whole_Board != null)
+                audioSource.PlayOneShot(sound_TransferForm_Whole_Board);
+                
+            else if (itemName == "TransferForm_Classroom" && sound_TransferForm_Classroom != null)
+                audioSource.PlayOneShot(sound_TransferForm_Classroom);
+                
+            else if (itemName == "TransferForm_Whole_bad" && sound_TransferForm_Whole_bad != null)
+                audioSource.PlayOneShot(sound_TransferForm_Whole_bad);
+                
+            else if (itemName == "book_locker" && sound_book_locker != null)
+                audioSource.PlayOneShot(sound_book_locker);
+        }
         
         if (HasCollectedAllRequiredItems() && collectedItems.Contains(hiddenEndingItem))
         {
@@ -130,7 +170,18 @@ public class GameFlowManager : MonoBehaviour
         }
     }
 
-    private bool HasCollectedAllRequiredItems()
+    // ==========================================
+    // 讓筆記本可以來詢問某個特定物品撿到了沒
+    // ==========================================
+    public bool IsItemCollected(string itemName)
+    {
+        return collectedItems.Contains(itemName);
+    }
+
+    // ==========================================
+    // 讓隱藏道具的腳本可以隨時問大腦「玩家找齊四個了嗎？」
+    // ==========================================
+    public bool HasCollectedAllRequiredItems()
     {
         foreach (string itemName in requiredItems)
         {
@@ -181,10 +232,7 @@ public class GameFlowManager : MonoBehaviour
             fadeOverlay.color = new Color(0, 0, 0, 1);
         }
 
-        // ==========================================
-        // 4. 【關鍵順序調整】：等畫面全黑後，才瞬間傳送到虛空
-        // 這樣玩家完全看不到破綻，也不會因為沒有 CharacterController 而掉落
-        // ==========================================
+        // 4. 等畫面全黑後，才瞬間傳送到虛空
         GameObject globalPlayer = GameObject.Find("[Global_Player]");
         if (globalPlayer != null)
         {
@@ -211,13 +259,15 @@ public class GameFlowManager : MonoBehaviour
             {
                 Transform playerEyes = camObj.transform;
                 
-                // 虛空中沒有牆壁，可以退回舒適的 1.2 公尺觀看距離
-                activeEndingPanel.transform.position = playerEyes.position + playerEyes.forward * 1.2f;
+                // ==========================================
+                // 【關鍵修改】：距離退回到 2.5 公尺，減輕視覺壓迫感
+                // ==========================================
+                activeEndingPanel.transform.position = playerEyes.position + playerEyes.forward * 2.5f;
                 activeEndingPanel.transform.LookAt(playerEyes);
                 activeEndingPanel.transform.Rotate(0, 180, 0); 
                 
-                // 改回 1f，解除雙重縮小限制，完全套用你在 Unity 介面中設計的大小！
-activeEndingPanel.transform.localScale = new Vector3(1f, 1f, 1f);
+                // 解除雙重縮小限制，完全套用 Unity 介面中設計的大小
+                activeEndingPanel.transform.localScale = new Vector3(1f, 1f, 1f);
             }
 
             activeEndingPanel.SetActive(true);

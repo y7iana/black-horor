@@ -8,12 +8,13 @@ public class SpawnManager : MonoBehaviour
     [Header("玩家主相機")]
     public GameObject cameraRig;
 
-    [Header("5 個隱形出生點")]
+    [Header("6 個隱形出生點")]
     public Transform spawnSchoolGate;
     public Transform spawnHall;
     public Transform spawnBath;
     public Transform spawnSport;
-    public Transform spawnClassroom; // 教室的出生點
+    public Transform spawnClassroom; // 教室1的出生點
+    public Transform spawnClassroom2; // 【新增】：教室2的出生點
 
     void Start()
     {
@@ -30,7 +31,8 @@ public class SpawnManager : MonoBehaviour
         if (checkScene == "hall") target = spawnHall;
         else if (checkScene == "bath") target = spawnBath;
         else if (checkScene == "sport(1)") target = spawnSport;
-        else if (checkScene == "classroom") target = spawnClassroom; // 這裡統一全部用小寫比對
+        else if (checkScene == "classroom") target = spawnClassroom; 
+        else if (checkScene == "classroom2") target = spawnClassroom2; // 【新增】：判斷如果從教室2回來
 
         // 啟動延遲傳送
         StartCoroutine(DelayedTeleport(target));

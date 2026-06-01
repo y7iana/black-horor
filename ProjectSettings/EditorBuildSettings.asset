@@ -23,6 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/classroom.unity
     guid: a7c648beaadec49ac84a54679d1f53d2
+  - enabled: 1
+    path: Assets/classroom2.unity
+    guid: 2b4b5403c3a26d248a898559e7888482
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: bec02c7609faa2b4a9460d602661c90c, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 05c277f6d25d4ea428a2231e8107d1c4, type: 2}

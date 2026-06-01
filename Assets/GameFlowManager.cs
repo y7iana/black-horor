@@ -18,27 +18,45 @@ public class GameFlowManager : MonoBehaviour
     public TextMeshProUGUI timerText; 
     private bool isTimerRunning = false;
 
+    [HideInInspector] 
+    public bool isGameEnding = false; 
+
     [Header("結局與轉場 UI")]
     public Image fadeOverlay;
     public GameObject ending1Panel; 
     public GameObject ending2Panel; 
     public GameObject ending3Panel; 
 
-    // ==========================================
-    // 【新增】：收集語音設定
-    // ==========================================
+    [Header("核心理念 UI (結局後觸發)")]
+    public GameObject coreMessagePanel;     
+    public CanvasGroup coreTextGroup;       
+    public CanvasGroup returnButtonGroup;   
+
+    private GameObject currentActiveEnding; 
+    private bool canTriggerCoreMessage = false; 
+
     [Header("收集語音設定")]
     public AudioSource audioSource;
-    [Tooltip("對應 book_chair")]
+    
+    [Space(10)]
     public AudioClip sound_book_chair;
-    [Tooltip("對應 TransferForm_Whole_Board")]
+    [Range(0f, 1f)] public float vol_book_chair = 1f; 
+
+    [Space(5)]
     public AudioClip sound_TransferForm_Whole_Board;
-    [Tooltip("對應 TransferForm_Classroom")]
+    [Range(0f, 1f)] public float vol_TransferForm_Whole_Board = 1f;
+
+    [Space(5)]
     public AudioClip sound_TransferForm_Classroom;
-    [Tooltip("對應 TransferForm_Whole_bad")]
+    [Range(0f, 1f)] public float vol_TransferForm_Classroom = 1f;
+
+    [Space(5)]
     public AudioClip sound_TransferForm_Whole_bad;
-    [Tooltip("對應 book_locker (以防萬一你也想加)")]
+    [Range(0f, 1f)] public float vol_TransferForm_Whole_bad = 1f;
+
+    [Space(5)]
     public AudioClip sound_book_locker;
+    [Range(0f, 1f)] public float vol_book_locker = 1f;
 
     private HashSet<string> collectedItems = new HashSet<string>();
 
@@ -89,9 +107,10 @@ public class GameFlowManager : MonoBehaviour
         if (ending2Panel != null) ending2Panel.SetActive(false);
         if (ending3Panel != null) ending3Panel.SetActive(false);
         
+        if (coreMessagePanel != null) coreMessagePanel.SetActive(false); 
+        
         if (timerText != null) timerText.gameObject.SetActive(false);
 
-        // 自動抓取身上的 AudioSource 元件
         if (audioSource == null) audioSource = GetComponent<AudioSource>();
 
         if (autoStartTimer) StartTimer(); 
@@ -99,26 +118,32 @@ public class GameFlowManager : MonoBehaviour
 
     void Update()
     {
-        if (!isTimerRunning) return;
-
-        timeRemaining -= Time.deltaTime;
-
-        if (timeRemaining <= 0)
+        if (isTimerRunning && !isGameEnding)
         {
-            timeRemaining = 0;
-            isTimerRunning = false;
+            timeRemaining -= Time.deltaTime;
 
-            if (HasCollectedAllRequiredItems())
+            if (timeRemaining <= 0)
             {
-                TriggerEnding(1); 
+                timeRemaining = 0;
+                isTimerRunning = false;
+
+                if (HasCollectedAllRequiredItems())
+                    TriggerEnding(1); 
+                else
+                    TriggerEnding(2); 
             }
-            else
-            {
-                TriggerEnding(2); 
-            }
+
+            UpdateTimerUI();
         }
 
-        UpdateTimerUI();
+        if (canTriggerCoreMessage)
+        {
+            if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger) || OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger))
+            {
+                canTriggerCoreMessage = false; 
+                StartCoroutine(TransitionToCoreMessage());
+            }
+        }
     }
 
     void UpdateTimerUI()
@@ -139,29 +164,26 @@ public class GameFlowManager : MonoBehaviour
 
     public void CollectItem(string itemName)
     {
-        if (!isTimerRunning) return;
+        if (!isTimerRunning || isGameEnding) return;
 
         collectedItems.Add(itemName);
 
-        // ==========================================
-        // 判斷物品名稱，並播放對應音檔
-        // ==========================================
         if (audioSource != null)
         {
             if (itemName == "book_chair" && sound_book_chair != null)
-                audioSource.PlayOneShot(sound_book_chair);
+                audioSource.PlayOneShot(sound_book_chair, vol_book_chair);
                 
             else if (itemName == "TransferForm_Whole_Board" && sound_TransferForm_Whole_Board != null)
-                audioSource.PlayOneShot(sound_TransferForm_Whole_Board);
+                audioSource.PlayOneShot(sound_TransferForm_Whole_Board, vol_TransferForm_Whole_Board);
                 
             else if (itemName == "TransferForm_Classroom" && sound_TransferForm_Classroom != null)
-                audioSource.PlayOneShot(sound_TransferForm_Classroom);
+                audioSource.PlayOneShot(sound_TransferForm_Classroom, vol_TransferForm_Classroom);
                 
             else if (itemName == "TransferForm_Whole_bad" && sound_TransferForm_Whole_bad != null)
-                audioSource.PlayOneShot(sound_TransferForm_Whole_bad);
+                audioSource.PlayOneShot(sound_TransferForm_Whole_bad, vol_TransferForm_Whole_bad);
                 
             else if (itemName == "book_locker" && sound_book_locker != null)
-                audioSource.PlayOneShot(sound_book_locker);
+                audioSource.PlayOneShot(sound_book_locker, vol_book_locker);
         }
         
         if (HasCollectedAllRequiredItems() && collectedItems.Contains(hiddenEndingItem))
@@ -170,25 +192,17 @@ public class GameFlowManager : MonoBehaviour
         }
     }
 
-    // ==========================================
-    // 讓筆記本可以來詢問某個特定物品撿到了沒
-    // ==========================================
     public bool IsItemCollected(string itemName)
     {
         return collectedItems.Contains(itemName);
     }
 
-    // ==========================================
-    // 讓隱藏道具的腳本可以隨時問大腦「玩家找齊四個了嗎？」
-    // ==========================================
     public bool HasCollectedAllRequiredItems()
     {
         foreach (string itemName in requiredItems)
         {
             if (!collectedItems.Contains(itemName))
-            {
                 return false; 
-            }
         }
         return true; 
     }
@@ -196,26 +210,30 @@ public class GameFlowManager : MonoBehaviour
     private void TriggerEnding(int endingType)
     {
         isTimerRunning = false; 
+        isGameEnding = true; 
         StartCoroutine(EndingRoutine(endingType));
     }
 
     IEnumerator EndingRoutine(int endingType)
     {
-        // 1. 癱瘓玩家的移動能力 (關閉重力與移動控制)
+        if (audioSource != null && audioSource.isPlaying)
+        {
+            yield return new WaitWhile(() => audioSource.isPlaying);
+            yield return new WaitForSeconds(0.5f);
+        }
+
         OVRPlayerController playerCtrl = FindObjectOfType<OVRPlayerController>();
         if (playerCtrl != null) playerCtrl.enabled = false;
 
         CharacterController charCtrl = FindObjectOfType<CharacterController>();
         if (charCtrl != null) charCtrl.enabled = false;
 
-        // 2. 跨場景尋找黑畫面
         if (fadeOverlay == null)
         {
             GameObject fadeObj = GameObject.Find("FadeOverlay");
             if (fadeObj != null) fadeOverlay = fadeObj.GetComponent<Image>();
         }
 
-        // 3. 漸變黑畫面 (Fade Out) - 確保畫面完全黑掉！
         if (fadeOverlay != null)
         {
             float timer = 0f;
@@ -232,45 +250,154 @@ public class GameFlowManager : MonoBehaviour
             fadeOverlay.color = new Color(0, 0, 0, 1);
         }
 
-        // 4. 等畫面全黑後，才瞬間傳送到虛空
         GameObject globalPlayer = GameObject.Find("[Global_Player]");
         if (globalPlayer != null)
         {
             globalPlayer.transform.position = new Vector3(0, 1000f, 0);
         }
 
-        // 5. 強制喚醒雷射筆
         if (VRLaserToggle.instance != null)
         {
             VRLaserToggle.instance.SetLaserState(true);
         }
 
-        // 6. 根據條件開啟對應的結局面板
         GameObject activeEndingPanel = null;
         if (endingType == 1) activeEndingPanel = ending1Panel;
         else if (endingType == 2) activeEndingPanel = ending2Panel;
         else if (endingType == 3) activeEndingPanel = ending3Panel;
 
-        // 7. 將面板移到眼前
         if (activeEndingPanel != null)
+        {
+            if (activeEndingPanel.transform.parent != null)
+                activeEndingPanel.transform.parent.gameObject.SetActive(true);
+
+            GameObject camObj = GameObject.Find("CenterEyeAnchor");
+            if (camObj != null)
+            {
+                Transform playerEyes = camObj.transform;
+                activeEndingPanel.transform.position = playerEyes.position + playerEyes.forward * 1.8f;
+                activeEndingPanel.transform.LookAt(playerEyes);
+                activeEndingPanel.transform.Rotate(0, 180, 0); 
+                activeEndingPanel.transform.localScale = new Vector3(1f, 1f, 1f);
+            }
+
+            activeEndingPanel.SetActive(true);
+
+            Canvas panelCanvas = activeEndingPanel.GetComponentInParent<Canvas>();
+            if (panelCanvas != null) panelCanvas.sortingOrder = 100;
+            
+            if (fadeOverlay != null && fadeOverlay.canvas != null)
+                fadeOverlay.canvas.sortingOrder = -10;
+
+            currentActiveEnding = activeEndingPanel;
+            canTriggerCoreMessage = true; 
+        }
+    }
+
+    IEnumerator TransitionToCoreMessage()
+    {
+        if (currentActiveEnding != null)
+        {
+            CanvasGroup endingCG = currentActiveEnding.GetComponent<CanvasGroup>();
+            if (endingCG == null) endingCG = currentActiveEnding.AddComponent<CanvasGroup>();
+
+            float timer = 0f;
+            while (timer < 1.5f)
+            {
+                timer += Time.unscaledDeltaTime;
+                endingCG.alpha = Mathf.Lerp(1, 0, timer / 1.5f);
+                yield return null;
+            }
+            currentActiveEnding.SetActive(false);
+        }
+
+        if (coreTextGroup != null) coreTextGroup.alpha = 0f;
+        if (returnButtonGroup != null) returnButtonGroup.alpha = 0f;
+
+        if (coreMessagePanel != null && currentActiveEnding != null)
         {
             GameObject camObj = GameObject.Find("CenterEyeAnchor");
             if (camObj != null)
             {
                 Transform playerEyes = camObj.transform;
-                
-                // ==========================================
-                // 【關鍵修改】：距離退回到 2.5 公尺，減輕視覺壓迫感
-                // ==========================================
-                activeEndingPanel.transform.position = playerEyes.position + playerEyes.forward * 2.5f;
-                activeEndingPanel.transform.LookAt(playerEyes);
-                activeEndingPanel.transform.Rotate(0, 180, 0); 
-                
-                // 解除雙重縮小限制，完全套用 Unity 介面中設計的大小
-                activeEndingPanel.transform.localScale = new Vector3(1f, 1f, 1f);
+                coreMessagePanel.transform.position = playerEyes.position + playerEyes.forward * 2.5f;
+                coreMessagePanel.transform.LookAt(playerEyes);
+                coreMessagePanel.transform.Rotate(0, 180, 0); 
+                coreMessagePanel.transform.localScale = new Vector3(1f, 1f, 1f);
             }
+            coreMessagePanel.SetActive(true);
 
-            activeEndingPanel.SetActive(true);
+            Canvas coreCanvas = coreMessagePanel.GetComponentInParent<Canvas>();
+            if (coreCanvas != null) coreCanvas.sortingOrder = 100;
         }
+
+        if (coreTextGroup != null)
+        {
+            float timer = 0f;
+            while (timer < 1.5f)
+            {
+                timer += Time.unscaledDeltaTime;
+                coreTextGroup.alpha = Mathf.Lerp(0, 1, timer / 1.5f);
+                yield return null;
+            }
+        }
+
+        yield return new WaitForSecondsRealtime(2f);
+
+        if (fadeOverlay != null)
+        {
+            fadeOverlay.raycastTarget = false; 
+        }
+
+        if (returnButtonGroup != null)
+        {
+            float timer = 0f;
+            while (timer < 1.5f)
+            {
+                timer += Time.unscaledDeltaTime;
+                returnButtonGroup.alpha = Mathf.Lerp(0, 1, timer / 1.5f);
+                yield return null;
+            }
+            
+            returnButtonGroup.interactable = true;
+            returnButtonGroup.blocksRaycasts = true;
+        }
+    }
+
+    public void ReturnToMainMenu()
+    {
+        // ==========================================
+        // 【修正 1】：離開前先隱藏計時器，避免它殘留在主選單
+        // ==========================================
+        if (timerText != null)
+        {
+            timerText.gameObject.SetActive(false);
+        }
+
+        if (fadeOverlay != null)
+        {
+            fadeOverlay.color = new Color(0, 0, 0, 0); 
+            fadeOverlay.raycastTarget = false;
+        }
+
+        OVRPlayerController playerCtrl = FindObjectOfType<OVRPlayerController>();
+        if (playerCtrl != null) playerCtrl.enabled = true;
+
+        CharacterController charCtrl = FindObjectOfType<CharacterController>();
+        if (charCtrl != null) charCtrl.enabled = true;
+
+        // ==========================================
+        // 【修正 2】：把玩家從 1000m 高空移回正常地板 (0,0,0)
+        // ==========================================
+        GameObject globalPlayer = GameObject.Find("[Global_Player]");
+        if (globalPlayer != null)
+        {
+            globalPlayer.transform.position = Vector3.zero;
+            // 消除旋轉，確保一回到主場景時視角是正前方
+            globalPlayer.transform.rotation = Quaternion.identity; 
+        }
+
+        Destroy(gameObject);
+        SceneManager.LoadScene("Init");
     }
 }

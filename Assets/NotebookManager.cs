@@ -14,7 +14,7 @@ public class NotebookManager : MonoBehaviour
     public TextMeshProUGUI notebookText;
 
     // ==========================================
-    // 【新增】：讓你可以直接在 Unity 面板微調位置！
+    // 讓你可以直接在 Unity 面板微調位置
     // ==========================================
     [Header("UI 顯示位置微調")]
     [Tooltip("筆記本距離眼睛多遠 (預設 0.6)")]
@@ -33,16 +33,20 @@ public class NotebookManager : MonoBehaviour
     void Update()
     {
         // ==========================================
-        // 【新增安全鎖】：如果還在 Init (初始/主選單) 場景，直接封鎖 B 鍵功能
+        // 安全鎖 1：如果還在 Init (初始/主選單) 場景，直接封鎖 B 鍵功能
         // ==========================================
         if (SceneManager.GetActiveScene().name == "Init")
         {
-            // 確保在 Init 時筆記本絕對是關閉的
-            if (isOpen)
-            {
-                isOpen = false;
-                if (notebookUI != null) notebookUI.SetActive(false);
-            }
+            ForceCloseNotebook();
+            return; // 提早結束，不執行下方的按鍵偵測
+        }
+
+        // ==========================================
+        // 安全鎖 2：【新增】如果遊戲已經進入結局階段，永久封鎖筆記本
+        // ==========================================
+        if (GameFlowManager.instance != null && GameFlowManager.instance.isGameEnding)
+        {
+            ForceCloseNotebook();
             return; // 提早結束，不執行下方的按鍵偵測
         }
 
@@ -61,14 +65,26 @@ public class NotebookManager : MonoBehaviour
         }
 
         // ==========================================
-        // 【關鍵跟隨功能】：只要筆記本是打開的狀態，每一幀都強制跟隨玩家視角
+        // 只要筆記本是打開的狀態，每一幀都強制跟隨玩家視角
         // ==========================================
         if (isOpen && notebookUI != null && centerEye != null)
         {
-            // 【關鍵修改】：套用你在 Unity 面板設定的距離與高度數字，不再寫死！
+            // 套用你在 Unity 面板設定的距離與高度數字
             notebookUI.transform.position = centerEye.position + centerEye.forward * uiDistance + centerEye.up * uiHeightOffset;
             notebookUI.transform.LookAt(centerEye);
             notebookUI.transform.Rotate(0, 180, 0); 
+        }
+    }
+
+    // ==========================================
+    // 【新增】：將強制關閉獨立寫成一個功能，方便安全鎖呼叫
+    // ==========================================
+    private void ForceCloseNotebook()
+    {
+        if (isOpen)
+        {
+            isOpen = false;
+            if (notebookUI != null) notebookUI.SetActive(false);
         }
     }
 

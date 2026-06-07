@@ -69,6 +69,11 @@ public class SequentialItemManager : MonoBehaviour
         if (item_TransferForm_Whole_Board != null) item_TransferForm_Whole_Board.SetActive(false);
         if (item_book_chair != null) item_book_chair.SetActive(false);
         if (item_TransferForm_Classroom != null) item_TransferForm_Classroom.SetActive(false);
+
+        // ==========================================
+        // 【關鍵修復 1】：確保第一局開場時，隱藏表單絕對是隱藏的！
+        // ==========================================
+        if (item_TransferForm_Whole_bad != null) item_TransferForm_Whole_bad.SetActive(false);
     }
 
     void Update()
@@ -159,20 +164,32 @@ public class SequentialItemManager : MonoBehaviour
         if (GameFlowManager.instance.audioSource != null)
         {
             yield return new WaitForSeconds(0.5f);
-            // 等待第四個物品的收集語音播完
             yield return new WaitWhile(() => GameFlowManager.instance.audioSource.isPlaying);
         }
 
-        // 呼叫大腦播放隱藏任務開啟音效！
-        GameFlowManager.instance.PlayHiddenTaskUnlockSound();
+        // ==========================================
+        // 【防呆煞車】：如果玩家在等待期間已經拿到了隱藏表單，直接煞車！
+        // ==========================================
+        if (GameFlowManager.instance.IsItemCollected("TransferForm_Whole_bad"))
+        {
+            yield break;
+        }
 
-        GameFlowManager.instance.isHiddenTaskRevealed = true;
+        // ==========================================
+        // 【關鍵修復】：使用大腦的全域變數「上鎖」，確保這段程式全世界只會被執行一次！
+        // 就算你不小心在場景裡掛了 10 個 ItemManager，也絕對不會重複播音效。
+        // ==========================================
+        if (!GameFlowManager.instance.isHiddenTaskRevealed)
+        {
+            GameFlowManager.instance.isHiddenTaskRevealed = true; // 立刻上鎖，阻擋其他潛在的腳本
 
-        NotebookManager notebook = FindObjectOfType<NotebookManager>();
-        if (notebook != null) notebook.UpdateNotebookImage();
+            GameFlowManager.instance.PlayHiddenTaskUnlockSound();
 
-        // 立刻顯示 Bad 轉學單，如果玩家手速快秒撿，GameFlowManager 的 audioSource.Stop() 就會發動，直接咖掉上面的解鎖音效！
-        if (item_TransferForm_Whole_bad != null)
-            item_TransferForm_Whole_bad.SetActive(true);
+            NotebookManager notebook = FindObjectOfType<NotebookManager>();
+            if (notebook != null) notebook.UpdateNotebookImage();
+
+            if (item_TransferForm_Whole_bad != null)
+                item_TransferForm_Whole_bad.SetActive(true);
+        }
     }
 }

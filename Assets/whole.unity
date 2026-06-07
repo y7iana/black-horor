@@ -265320,6 +265320,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TransferForm_Whole_bad
       objectReference: {fileID: 0}
+    - target: {fileID: 2048675887854201462, guid: b13c5d9318daf494a88d34e94904cdc9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058508754583421636, guid: b13c5d9318daf494a88d34e94904cdc9, type: 3}
+      propertyPath: spookyAudioSource
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8413650376947058433, guid: b13c5d9318daf494a88d34e94904cdc9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.573

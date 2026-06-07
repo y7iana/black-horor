@@ -18527,6 +18527,7 @@ GameObject:
   - component: {fileID: 1536305248}
   - component: {fileID: 1536305247}
   - component: {fileID: 1536305249}
+  - component: {fileID: 1536305250}
   m_Layer: 5
   m_Name: SettingsCanvas
   m_TagString: Untagged
@@ -18619,6 +18620,18 @@ MonoBehaviour:
     m_Bits: 4294967295
   pointer: {fileID: 0}
   sortOrder: 0
+--- !u!114 &1536305250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536305244}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e2a7b95404e4b43a6cdc049a5d6831, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1570960467
 GameObject:
   m_ObjectHideFlags: 0

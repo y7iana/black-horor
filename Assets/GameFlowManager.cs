@@ -248,9 +248,7 @@ public class GameFlowManager : MonoBehaviour
 
         if (audioSource != null)
         {
-            // ==========================================
-            // 【修正 1】：強制切斷上一秒正在播的音檔 (如解鎖任務的語音)
-            // ==========================================
+            // 強制切斷上一秒正在播的音檔
             if (audioSource.isPlaying)
             {
                 audioSource.Stop();
@@ -400,21 +398,16 @@ public class GameFlowManager : MonoBehaviour
 
             activeEndingPanel.SetActive(true);
 
-            // ==========================================
-            // 【修正 2】：播放各結局專屬音檔 (依照條件正確歸位)
-            // ==========================================
             if (endingType == 1 && sound_EndingGood != null)
             {
-                audioSource.PlayOneShot(sound_EndingGood); // 結局1 (找齊4件)
+                audioSource.PlayOneShot(sound_EndingGood); 
             }
             else if (endingType == 2)
             {
-                // 結局2 (Bad Ending 沒找齊)：觸發海浪+槍聲
                 StartCoroutine(PlayEndingBadAudioRoutine());
             }
             else if (endingType == 3 && sound_EndingFinal != null)
             {
-                // 結局3 (Final Ending 隱藏解鎖)
                 audioSource.PlayOneShot(sound_EndingFinal);
             }
 
@@ -429,28 +422,24 @@ public class GameFlowManager : MonoBehaviour
         }
     }
 
-    // 結局2 (Bad Ending) 專屬播音排程：海浪聲 -> 延遲 -> 3聲槍響
     IEnumerator PlayEndingBadAudioRoutine()
     {
-        // 1. 播放海浪聲 (無限循環)
         if (bgmSource != null && sound_EndingBad_Waves != null)
         {
             bgmSource.clip = sound_EndingBad_Waves;
             bgmSource.loop = true;
-            bgmSource.volume = bgmNormalVolume; // 重置音量
+            bgmSource.volume = bgmNormalVolume; 
             bgmSource.Play();
         }
 
-        // 2. 延遲 3 秒鐘 (可依照畫面呈現感覺自行修改這個數字)
         yield return new WaitForSeconds(3f);
 
-        // 3. 連續播放 3 次槍聲
         if (audioSource != null && sound_EndingBad_Gunshot != null)
         {
             for (int i = 0; i < 3; i++)
             {
                 audioSource.PlayOneShot(sound_EndingBad_Gunshot);
-                yield return new WaitForSeconds(1.5f); // 槍聲與槍聲之間的間隔時間
+                yield return new WaitForSeconds(1.5f); 
             }
         }
     }
@@ -492,6 +481,7 @@ public class GameFlowManager : MonoBehaviour
             if (coreCanvas != null) coreCanvas.sortingOrder = 100;
         }
 
+        // 核心訊息文字淡入
         if (coreTextGroup != null)
         {
             float timer = 0f;
@@ -503,6 +493,7 @@ public class GameFlowManager : MonoBehaviour
             }
         }
 
+        // 停留展示兩秒
         yield return new WaitForSecondsRealtime(2f);
 
         if (fadeOverlay != null)
@@ -510,6 +501,7 @@ public class GameFlowManager : MonoBehaviour
             fadeOverlay.raycastTarget = false; 
         }
 
+        // 選項按鈕群組淡入 (這裡會同時讓底下的「我不接受」跟「接受結局」一起浮現)
         if (returnButtonGroup != null)
         {
             float timer = 0f;
@@ -525,6 +517,9 @@ public class GameFlowManager : MonoBehaviour
         }
     }
 
+    // ==========================================
+    // 結局選項 1：我不接受 (返回 Init 主選單)
+    // ==========================================
     public void ReturnToMainMenu()
     {
         collectedItems.Clear();
@@ -590,5 +585,21 @@ public class GameFlowManager : MonoBehaviour
         Destroy(gameObject);
 
         SceneManager.LoadScene("Init");
+    }
+
+    // ==========================================
+    // 【新增】結局選項 2：接受結局 (徹底離開遊戲)
+    // ==========================================
+    public void QuitGame()
+    {
+        Debug.Log("玩家選擇接受結局，退出遊戲。");
+        
+        // 如果是在 Unity 編輯器裡面測試，會停止播放
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        // 打包成 App 後，這行會直接關閉應用程式
+        Application.Quit();
+#endif
     }
 }

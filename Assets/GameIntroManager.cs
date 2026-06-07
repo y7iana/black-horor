@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video; // 負責控制影片播放的模組
 using System.Collections;
 using TMPro; 
 
@@ -10,14 +11,23 @@ public class GameIntroManager : MonoBehaviour
     public Image fadeOverlay;         
     public TextMeshProUGUI subtitleText; 
 
+    // ==========================================
+    // 【新增】：VR360 影片與天空盒設定
+    // ==========================================
+    [Header("VR360 開場影片設定")]
+    [Tooltip("請把場景中的 Video Player 拖進來")]
+    public VideoPlayer vr360Video; 
+    
+    [Tooltip("請把你做好的 VR360_Mat 材質球拖進來")]
+    public Material vr360SkyboxMaterial; 
+    
+    // 用來記憶原本的森林天空，方便看完影片後復原
+    private Material originalSkybox; 
+
     [Header("音效設定")]
     public AudioSource introAudioSource; 
     
-    [Tooltip("Init 場景黑畫面時播放的第一段音檔")]
-    public AudioClip audioClip1; 
-    [Range(0f, 1f)] public float audio1Volume = 1f; 
-
-    [Tooltip("進入 Whole 場景時播放的第二段音檔")]
+    [Tooltip("進入 Whole 場景時播放的音檔")]
     public AudioClip audioClip2; 
     [Range(0f, 1f)] public float audio2Volume = 1f; 
 
@@ -30,7 +40,6 @@ public class GameIntroManager : MonoBehaviour
     }
 
     [Header("字幕設定 (目前不打字請將 Size 設為 0)")]
-    public SubtitleLine[] audio1Subtitles;
     public SubtitleLine[] audio2Subtitles;
 
     [Header("場景與轉場設定")]
@@ -68,38 +77,67 @@ public class GameIntroManager : MonoBehaviour
 
     IEnumerator Phase1Routine()
     {
-        // 1. 畫面變黑 (Fade Out)
+        // 1. 畫面先變全黑 (Fade Out)，遮住森林主選單
         yield return StartCoroutine(Fade(0, 1));
 
-        // 2. 播放第一段音檔與字幕
-        if (introAudioSource != null && audioClip1 != null)
+        // ==========================================
+        // 【魔術時刻】：在全黑的時候，偷偷把天空換成 VR360 影片！
+        // ==========================================
+        if (vr360SkyboxMaterial != null)
         {
-            introAudioSource.clip = audioClip1;
-            introAudioSource.volume = audio1Volume; 
-            introAudioSource.Play();
-            
-            StartCoroutine(PlaySubtitles(audio1Subtitles));
+            originalSkybox = RenderSettings.skybox; // 先把森林天空記在腦海裡
+            RenderSettings.skybox = vr360SkyboxMaterial; // 換上 VR360 天空
+        }
 
-            // 【已修復】：加入 Time.timeScale == 0f 防呆機制，防止選單開啟時跳關
-            while (introAudioSource != null && (introAudioSource.isPlaying || Time.timeScale == 0f))
+        // 2. 準備並播放 VR360 影片
+        if (vr360Video != null)
+        {
+            // 讓影片先在黑畫面背後準備好，防止卡頓
+            vr360Video.Prepare();
+            while (!vr360Video.isPrepared) 
             {
-                // 只有在遊戲「未暫停」時，才允許按板機跳過，防止在選單裡誤觸
+                yield return null;
+            }
+
+            // 準備好後開始播放
+            vr360Video.Play();
+
+            // 3. 畫面變透明 (Fade In)，玩家看見 360 影片
+            yield return StartCoroutine(Fade(1, 0));
+
+            // 給予 0.5 秒緩衝時間，確保影片狀態切換完成
+            yield return new WaitForSeconds(0.5f);
+
+            // 4. 等待影片播完，或是玩家按板機跳過
+            while (vr360Video.isPlaying || Time.timeScale == 0f)
+            {
                 if (Time.timeScale > 0f)
                 {
                     if (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger) || OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
                     {
-                        introAudioSource.Stop(); 
+                        vr360Video.Stop(); 
                         break; 
                     }
                 }
                 yield return null; 
             }
+
+            // 5. 影片結束後，畫面再次變全黑 (Fade Out)，準備切換場景
+            yield return StartCoroutine(Fade(0, 1));
+        }
+
+        // ==========================================
+        // 復原動作：把森林天空換回來，確保不影響後續的關卡
+        // ==========================================
+        if (originalSkybox != null)
+        {
+            RenderSettings.skybox = originalSkybox;
         }
 
         // 強制確保跳過後字幕立即清空
         if (subtitleText != null) subtitleText.text = "";
 
-        // 3. 載入下一關
+        // 6. 載入下一關 (whole 場景)
         shouldProceedToPhase2 = true;
         SceneManager.LoadScene(nextSceneName);
     }
@@ -153,7 +191,6 @@ public class GameIntroManager : MonoBehaviour
         StartCoroutine(Fade(1, 0));
 
         // 4. 等待音檔 2 播完 (確保強制聽完)
-        // 【已修復】：同樣加入 Time.timeScale == 0f 防呆機制
         while (introAudioSource != null && (introAudioSource.isPlaying || Time.timeScale == 0f))
         {
             yield return null;
@@ -179,10 +216,9 @@ public class GameIntroManager : MonoBehaviour
         int index = 0;
         bool isDisplaying = false;
 
-        // 【已修復】：保護字幕總迴圈不被暫停中斷
         while (introAudioSource != null && (introAudioSource.isPlaying || Time.timeScale == 0f))
         {
-            timer += Time.deltaTime; // 暫停時 deltaTime 會是 0，所以計時器自動完美凍結
+            timer += Time.deltaTime; 
             if (index < subtitles.Length && !isDisplaying)
             {
                 if (timer >= subtitles[index].startTime)
@@ -201,7 +237,6 @@ public class GameIntroManager : MonoBehaviour
         if (subtitleText != null) subtitleText.text = line.text;
         
         float timer = 0f;
-        // 【已修復】：保護單句字幕不被暫停中斷
         while (timer < line.duration && introAudioSource != null && (introAudioSource.isPlaying || Time.timeScale == 0f))
         {
             timer += Time.deltaTime;

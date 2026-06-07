@@ -18,6 +18,13 @@ public class VRBackpack : MonoBehaviour
 
     void Start()
     {
+        // ==========================================
+        // 【防呆修復】：確保每次玩家(大腦)重新生成時，背包絕對是空的！
+        // ==========================================
+        inventory.Clear();
+        isItemOut = false;
+        currentIndex = 0;
+
         // 確保遊戲開始時提示 UI 是隱藏的
         if (uiCanvas != null) uiCanvas.SetActive(false);
     }
@@ -50,7 +57,10 @@ public class VRBackpack : MonoBehaviour
         {
             inventory.Add(item);
 
+            // ==========================================
             // 跨場景物品記憶連線
+            // (⚠️ 注意：如果 ItemStateSaver 使用 static 變數，它會導致第二局物品自殺)
+            // ==========================================
             ItemStateSaver saver = item.GetComponent<ItemStateSaver>();
             if (saver != null)
             {
@@ -67,10 +77,7 @@ public class VRBackpack : MonoBehaviour
             StopAllCoroutines();
             StartCoroutine(ShowUIRoutine());
 
-            // ==========================================
-            // 【關鍵修改】：通知遊戲大腦 (GameFlowManager) 物品已收集！
-            // 這裡把 item.name 傳過去，讓大腦可以比對是不是指定的關鍵道具
-            // ==========================================
+            // 通知遊戲大腦 (GameFlowManager) 物品已收集！
             if (GameFlowManager.instance != null)
             {
                 GameFlowManager.instance.CollectItem(item.name);
@@ -105,9 +112,7 @@ public class VRBackpack : MonoBehaviour
             // 預設展示距離
             float distance = 0.4f; 
             
-            // ==========================================
-            // 【核心邏輯】：讀取物品專屬設定
-            // ==========================================
+            // 讀取物品專屬設定
             VRItemSettings settings = item.GetComponent<VRItemSettings>();
 
             if (settings != null)
@@ -126,7 +131,7 @@ public class VRBackpack : MonoBehaviour
             }
             else
             {
-                // 防呆機制：如果忘記掛載設定腳本，預設套用轉學單的縮小尺寸
+                // 防呆機制：預設套用縮小尺寸
                 item.transform.localScale = new Vector3(0.1960359f, 0.2764107f, 0.1960359f);
             }
 
@@ -142,5 +147,24 @@ public class VRBackpack : MonoBehaviour
                 rb.isKinematic = true;
             }
         }
+    }
+
+    // ==========================================
+    // 【全新護航】：手動清空背包與手上的物品 (可供外部呼叫)
+    // ==========================================
+    public void ClearInventory()
+    {
+        foreach (var item in inventory)
+        {
+            if (item != null) 
+            {
+                item.SetActive(false);
+                Destroy(item);
+            }
+        }
+        inventory.Clear();
+        isItemOut = false;
+        currentIndex = 0;
+        if (uiCanvas != null) uiCanvas.SetActive(false);
     }
 }

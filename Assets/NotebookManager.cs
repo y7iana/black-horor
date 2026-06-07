@@ -1,5 +1,5 @@
 using UnityEngine;
-using TMPro; // 引入 TextMeshPro 功能
+using UnityEngine.UI; // 引入 UI 影像功能 (取代原本的 TMPro)
 using UnityEngine.SceneManagement; // 引入場景管理功能，用來判斷現在在哪個場景
 
 public class NotebookManager : MonoBehaviour
@@ -10,8 +10,17 @@ public class NotebookManager : MonoBehaviour
     [Header("玩家的眼睛 (CenterEyeAnchor)")]
     public Transform centerEye;
 
-    [Header("剛剛新增的文字框 (TaskText)")]
-    public TextMeshProUGUI notebookText;
+    [Header("清單圖片顯示區 (請放入剛建立的 Image)")]
+    public Image notebookImage;
+
+    [Header("各階段清單圖檔 (請依序拖入)")]
+    public Sprite img_0;
+    public Sprite img_1;
+    public Sprite img_2;
+    public Sprite img_3;
+    public Sprite img_4;
+    public Sprite img_hidden_1;
+    public Sprite img_hidden_2;
 
     // ==========================================
     // 讓你可以直接在 Unity 面板微調位置
@@ -42,7 +51,7 @@ public class NotebookManager : MonoBehaviour
         }
 
         // ==========================================
-        // 安全鎖 2：【新增】如果遊戲已經進入結局階段，永久封鎖筆記本
+        // 安全鎖 2：如果遊戲已經進入結局階段，永久封鎖筆記本
         // ==========================================
         if (GameFlowManager.instance != null && GameFlowManager.instance.isGameEnding)
         {
@@ -57,8 +66,8 @@ public class NotebookManager : MonoBehaviour
             
             if (isOpen)
             {
-                // 每次打開筆記本的瞬間，都重新檢查並更新文字狀態！
-                UpdateNotebookText();
+                // 每次打開筆記本的瞬間，都重新檢查並更新圖片狀態！
+                UpdateNotebookImage();
             }
             
             if (notebookUI != null) notebookUI.SetActive(isOpen);
@@ -77,7 +86,7 @@ public class NotebookManager : MonoBehaviour
     }
 
     // ==========================================
-    // 【新增】：將強制關閉獨立寫成一個功能，方便安全鎖呼叫
+    // 將強制關閉獨立寫成一個功能，方便安全鎖呼叫
     // ==========================================
     private void ForceCloseNotebook()
     {
@@ -89,40 +98,26 @@ public class NotebookManager : MonoBehaviour
     }
 
     // ==========================================
-    // 動態更新筆記本文字與刪除線
+    // 動態更新筆記本圖片 (看圖說故事核心)
     // ==========================================
-    public void UpdateNotebookText()
+    public void UpdateNotebookImage()
     {
-        if (notebookText == null || GameFlowManager.instance == null) return;
+        if (notebookImage == null || GameFlowManager.instance == null) return;
 
-        // 檢查大腦，判斷各項物品是否已經收集？
-        // 如果有，就打個 [V] 並用 <s> </s> 標籤包起來產生刪除線！
-        string t1 = GameFlowManager.instance.IsItemCollected("TransferForm_Whole_Board") 
-            ? "<s>[V] 調查走廊佈告欄與周邊環境。</s>" 
-            : "[ ] 調查走廊佈告欄與周邊環境。";
-
-        string t2 = GameFlowManager.instance.IsItemCollected("TransferForm_Classroom") 
-            ? "<s>[V] 清查教室內部。</s>" 
-            : "[ ] 清查教室內部。";
-
-        string t3 = GameFlowManager.instance.IsItemCollected("book_locker") 
-            ? "<s>[V] 檢查校內置物空間與淋浴間設施。</s>" 
-            : "[ ] 檢查校內置物空間與淋浴間設施。";
-
-        string t4 = GameFlowManager.instance.IsItemCollected("book_chair") 
-            ? "<s>[V] 巡視大禮堂與體育館。</s>" 
-            : "[ ] 巡視大禮堂與體育館。";
-
-        // 把所有文字組合起來，印到畫面上 (<b> 代表粗體 )
-        // 最下方的【其他注意事項】是獨立寫死的字串，所以絕對不會被加上刪除線
-        notebookText.text = 
-            "<b>【校園巡視清單】</b>\n\n" + 
-            t1 + "\n" + 
-            t2 + "\n" + 
-            t3 + "\n" + 
-            t4 + "\n\n" +
-            "----------------------------------\n" +
-            "<b>【其他注意事項】</b>\n" +
-            "體育館的散落球具尚未歸位，請留意場地安全。";
+        // 越後面的進度，判斷優先級越高
+        if (GameFlowManager.instance.IsItemCollected("TransferForm_Whole_bad"))
+            notebookImage.sprite = img_hidden_2;
+        else if (GameFlowManager.instance.isHiddenTaskRevealed)
+            notebookImage.sprite = img_hidden_1;
+        else if (GameFlowManager.instance.IsItemCollected("TransferForm_Classroom"))
+            notebookImage.sprite = img_4;
+        else if (GameFlowManager.instance.IsItemCollected("book_chair"))
+            notebookImage.sprite = img_3;
+        else if (GameFlowManager.instance.IsItemCollected("TransferForm_Whole_Board"))
+            notebookImage.sprite = img_2;
+        else if (GameFlowManager.instance.IsItemCollected("book_locker"))
+            notebookImage.sprite = img_1;
+        else
+            notebookImage.sprite = img_0;
     }
 }
